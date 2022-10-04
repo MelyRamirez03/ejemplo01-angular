@@ -1,0 +1,60 @@
+<div class="bg-primary p-3">
+        <h1 class="text-warning p-2">Cinepolis®</h1>
+    <div class="container">
+        <div class="row">
+            <div class="col-6">
+                <!--<form>-->
+                    <div class="border p-3">
+                    <div class="mb-3">
+                        <h3>Entradas</h3>
+                        <div class="form-text">*Costo de entrada: $12.00*</div>
+                      <label class="form-label">Nombre</label>
+                      <input type="text" class="form-control" [(ngModel)]="nombre" name="nombre">
+                    </div>
+                    <div class="mb-3">
+                      <label class="form-label">Cantidad de compradores</label>
+                      <input type="text" class="form-control" [(ngModel)]="comprador" name="comprador">
+                      <div class="form-text">*Máximo 2 compradores*</div>
+                    </div>
+                    <div class="mb-3 form-check">
+                        <label class="form-label">Tarjeta Cineco</label>
+                        <div class="form-text">*Obten 10% de descuento adicional en todas tus compras*</div>
+                            <div>
+                                    <input class="form-check-input" type="radio" [value]="true" [(ngModel)]="tarjeta">
+                                    <label class="form-check-label">
+                                    Sí
+                                    </label>
+                                    <br>
+                                    <input class="form-check-input" type="radio" [value]="false" [(ngModel)]="tarjeta">
+                                    <label class="form-check-label">
+                                    No
+                                    </label>
+                            </div>
+                    </div>
+                    <div class="mb-3">
+                        <label class="form-label" >Cantidad de boletas</label>
+                        <input type="text" class="form-control" [(ngModel)]="boleta" name="boleta">
+                    </div>
+                </div>
+                  <!--</form>-->
+            </div>
+            <div class="col-6 border p-3">
+                <h3>Salidas</h3>
+                <label class="form-label">Estado del pedido</label>
+                <div>
+                    <p>Nombre: {{ nombre }}</p>
+                    <p>Boletas totales: {{ boleta }}</p>
+                    <p>Total: {{ desc }}</p>
+                    <p>{{ error }}</p>
+                </div>
+            </div>
+        
+        <br>
+        <div class="border p-3">
+            <h3>Acciones</h3>
+            <button type="button" class="btn btn-secondary" (click)="procesamiento()">Procesar</button> 
+            <button type="submit" class="btn btn-secondary">Salir</button>
+            </div>
+        </div>
+    </div>
+</div>
